@@ -173,6 +173,7 @@ SELECT * FROM Client WHERE Pays IN ("France","Germany","Canada");
 SELECT Societe FROM Client WHERE Societe LIKE '%restaurant%';
 
 
+SELECT Descriptionn, NomCateg FROM Categorie;
 SELECT Pays, Ville FROM Client ORDER BY Pays ASC, Ville DESC;
 SELECT UPPER(RefProd), UPPER(NomProd), NoFour, PrixUnit FROM Produit WHERE NoFour=8;
 SELECT NoCom, PrixUnit, Qte, Remise, (PrixUnit*Remise) AS MontantRemise, ((PrixUnit-(PrixUnit*Remise))* Qte) AS MontantTotalAPayer FROM DetailsCommande WHERE NoCom=10251;
