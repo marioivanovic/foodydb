@@ -212,7 +212,8 @@ SELECT NoFour, CodeCateg, AVG(PrixUnit) AS PrixMoyen FROM Produit GROUP By NoFou
 
 
 SELECT NoFour FROM Produit GROUP BY NoFour HAVING COUNT(*)=1;
-SELECT NoFour, CodeCateg FROM Produit GROUP BY NoFour, CodeCateg HAVING COUNT(DISTINCT CodeCateg)=1;
+SELECT NoFour, CodeCateg FROM Produit GROUP BY NoFour, CodeCateg HAVING COUNT(CodeCateg)=1;
+SELECT NoFour, CodeCateg, COUNT( DISTINCT CodeCateg) AS NbrCateg FROM Produit GROUP BY NoFour HAVING NbrCateg =1;
 SELECT NoFour, NomProd, PrixUnit FROM Produit WHERE PrixUnit >= 50 GROUP BY NoFour HAVING PrixUnit = MAX(PrixUnit);
 
 
