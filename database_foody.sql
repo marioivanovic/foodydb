@@ -196,6 +196,7 @@ SELECT NoCom, DateCom, ALivAvant, DATEDIFF( ALivAvant, DateCom)  AS "Délai livr
 SELECT COUNT(Fonction) FROM Employe WHERE Fonction="Sales Manager";
 SELECT COUNT(*) FROM Produit WHERE CodeCateg = 1 AND NoFour IN (1, 18);
 SELECT COUNT(DISTINCT PaysLiv) FROM Commande;
+SELECT COUNT(*) AS AugustDeleveryCount FROM commande WHERE DATE_FORMAT(ALivAvant, "%M %Y") LIKE 'August 2006';
 
 
 SELECT MIN(CAST(Portt AS FLOAT)) AS PortMinimum, MAX(CAST(Portt AS FLOAT)) AS PortMaximum FROM Commande;
