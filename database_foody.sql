@@ -165,10 +165,10 @@ LOAD DATA LOCAL INFILE 'Desktop/CDA_Java_Aulnay/week_1/Back/data/messager.csv' I
 
 
 SELECT * FROM Produit ORDER BY PrixUnit DESC LIMIT 10;
-SELECT * FROM Produit WHERE PrixUnit > 81 LIMIT 3;
+SELECT * FROM Produit WHERE PrixUnit DESC LIMIT 3;
 
 
-SELECT * FROM Client WHERE Ville="Paris" AND Fax="NULL";
+SELECT * FROM Client WHERE Ville="Paris" AND Fax IS NULL;
 SELECT * FROM Client WHERE Pays IN ("France","Germany","Canada");
 SELECT Societe FROM Client WHERE Societe LIKE '%restaurant%';
 
