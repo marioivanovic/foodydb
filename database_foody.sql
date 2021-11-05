@@ -190,7 +190,7 @@ SELECT Societe, Contact, Fonction FROM Client WHERE Fonction LIKE '%Manager%';
 SELECT DATE_FORMAT(DateCom, "%W") FROM Commande;
 SELECT DATE_FORMAT(DateCom, "%W"),  CASE WHEN DATE_FORMAT(DateCom, "%W")='Saturday' THEN ‘Weekend' WHEN DATE_FORMAT(DateCom, "%W")='Sunday' THEN 'Weekend' ELSE ‘Week Day' END AS 'Days' FROM Commande;
 SELECT NoCom, CodeCli, Destinataire, DATEDIFF(ALivAvant, DateCom) FROM Commande;
-SELECT NoCom, CodeCli, Destinataire, ADDDATE(ALivAvant, INTERVAL 1 MONTH) FROM Commande AS delaiRelance;
+SELECT NoCom, CodeCli, Destinataire, ADDDATE(ALivAvant, INTERVAL 1 MONTH) FROM Commande AS DelaiRelance;
 
 
 SELECT COUNT(Fonction) FROM Employe WHERE Fonction="Sales Manager";
